@@ -4,9 +4,9 @@ import { ProjectRoutes } from './routes/ProjectRoutes';
 
 function App() {
   return (
-    <div className='bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200'>
+    <>
       <ProjectRoutes />
-    </div>
+    </>
   );
 }
 

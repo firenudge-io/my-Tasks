@@ -3,6 +3,7 @@ import { BrowserRouter, Routes } from "react-router-dom"
 import { ProjectNavbar } from "../components/ProjectNavbar"
 import { Home } from "../pages/Home"
 import { ScrollTop } from "../hooks/ScrollTop"
+import { ProjectFooter } from "../components/ProjectFooter"
 
 export const Route_Items = [
     { name: "Home", link: "/my-Tasks", element: <Home /> },
@@ -14,7 +15,7 @@ export const Nav_Items = [
 
 export const ProjectRoutes = () => {
     return (
-        <div>
+        <div className="bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100">
             <BrowserRouter>
                 <ProjectNavbar />
 
@@ -31,6 +32,7 @@ export const ProjectRoutes = () => {
                     }
                 </Routes>
 
+                <ProjectFooter />
                 <ScrollTop col={"green"} />
 
             </BrowserRouter>
