@@ -1,0 +1,27 @@
+.custom-img {
+    background-image: url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80");
+}
+
+.fullpage {
+    display: flex;
+    overflow: auto;
+    flex: none;
+
+    flex-flow: column nowrap;
+
+    scroll-snap-type: y mandatory;
+}
+
+.fullpage>div {
+    scroll-snap-align: center;
+    flex: none;
+}
+
+.container input[type="checkbox"]:checked~div {
+    text-decoration: line-through;
+    color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.container input[type="checkbox"] {
+    visibility: hidden;
+}
