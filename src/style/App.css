@@ -25,3 +25,17 @@
 .container input[type="checkbox"] {
     visibility: hidden;
 }
+
+.fade-in2 {
+    animation: fadein2 2s forwards;
+}
+
+@keyframes fadein2 {
+    0% {
+        filter: opacity(0);
+    }
+
+    100% {
+        filter: opacity(1);
+    }
+}

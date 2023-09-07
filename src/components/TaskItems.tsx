@@ -6,6 +6,7 @@ export function TaskItems() {
     // SHEET
     const [task, setTask] = useState([])
     const [loading, setLoading] = useState(true)
+    const [show, setShow] = useState(false)
 
 
     // SHEET FUNCTIONS
@@ -38,14 +39,28 @@ export function TaskItems() {
     }
     fetchData();
 
+    function toggle(){
+        setShow(!show)
+    }
+
 
     return (
-        <div className="mb-10">
+        <div className="mb-10 mt-5">
             {
                 loading ?
                     <></>
                     :
-                    <div className="flex flex-wrap flex-row mx-auto justify-center items-center">
+                        !show ?
+                        <div className="flex flex-row justify-center">
+                            <button
+                                className="px-4 py-2 text-sm font-lg text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white m-3 uppercase"
+                                onClick={toggle}
+                            >
+                                <b>Tags</b>
+                            </button>
+                        </div>
+                        :
+                        <div className="flex flex-wrap flex-row mx-auto justify-center items-center fade-in2">
                         {task.map((item) => (
                             item.name.split(' ')[0] === 'sep' ?
                                 <a
@@ -70,9 +85,10 @@ export function TaskItems() {
                                 <h1 className="text-3xl my-3">{item.name.split(' ')[1]}</h1>
                             </>
                             :
-                            <CheckBox id={item.name} key={item.name} />
+                            <div className="fade-in2">
+                                <CheckBox id={item.name} key={item.name} />
+                            </div>
                     ))
-
             }
         </div>
     )
