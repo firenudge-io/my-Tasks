@@ -6,11 +6,11 @@ import { ScrollTop } from "../hooks/ScrollTop"
 import { ProjectFooter } from "../components/ProjectFooter"
 
 export const Route_Items = [
-    { name: "Home", link: "/my-Tasks", element: <Home /> },
+    { name: "Home", link: "/toDos", element: <Home /> },
 ]
 
 export const Nav_Items = [
-    { name: "Home", link: "/my-Tasks" },
+    { name: "Home", link: "/toDos" },
 ]
 
 export const ProjectRoutes = () => {
