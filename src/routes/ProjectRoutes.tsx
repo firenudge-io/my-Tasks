@@ -3,7 +3,6 @@ import { BrowserRouter, Routes } from "react-router-dom"
 import { ProjectNavbar } from "../components/ProjectNavbar"
 import { Home } from "../pages/Home"
 import { ScrollTop } from "../hooks/ScrollTop"
-import { ProjectFooter } from "../components/ProjectFooter"
 
 export const Route_Items = [
     { name: "Home", link: "/toDos", element: <Home /> },
@@ -32,7 +31,6 @@ export const ProjectRoutes = () => {
                     }
                 </Routes>
 
-                <ProjectFooter />
                 <ScrollTop col={"green"} />
 
             </BrowserRouter>
