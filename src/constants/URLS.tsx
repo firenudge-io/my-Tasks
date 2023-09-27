@@ -1,6 +1,6 @@
 // export const EmailURL = 'https://script.google.com/macros/s/AKfycbzIb-cFk3OjDH5bugT-f-xz-hiSRyQbtpPvSVy-24DHt3KTxKYPqiRUywHlj1EPksoMQA/exec'
 // export const ValuesURL = 'https://script.google.com/macros/s/AKfycbzIb-cFk3OjDH5bugT-f-xz-hiSRyQbtpPvSVy-24DHt3KTxKYPqiRUywHlj1EPksoMQA/exec'
 // export const ReadURL = 'https://script.google.com/macros/s/AKfycbzTTg-u0t77QQ8YR7p156leaty2wAM5t2ji6iKATZkrlGs_0TcpaqRRrXeQSHMkT7d_/exec'
-export const FooterURL = 'https://script.google.com/macros/s/AKfycbxYWVhtLbQWqxB6rXkHGpnzqWlG72qNYztW5Upn8mFq_i1Sqrhkah-YbChnK_krAFqb/exec'
+// export const FooterURL = 'https://script.google.com/macros/s/AKfycbxYWVhtLbQWqxB6rXkHGpnzqWlG72qNYztW5Upn8mFq_i1Sqrhkah-YbChnK_krAFqb/exec'
 export const ReadURL = 'https://script.google.com/macros/s/AKfycby5iMwJvxOmd-wpQgOLuEj2KzoTUgoRhh8_fez3IVk-Wr9V2Qq-puUZiZN6GZjtJCUC4Q/exec'
 export const WriteURL = ''

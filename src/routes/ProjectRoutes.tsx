@@ -5,11 +5,11 @@ import { Home } from "../pages/Home"
 import { ScrollTop } from "../hooks/ScrollTop"
 
 export const Route_Items = [
-    { name: "Home", link: "/toDos", element: <Home /> },
+    { name: "Home", link: "/", element: <Home /> },
 ]
 
 export const Nav_Items = [
-    { name: "Home", link: "/toDos" },
+    { name: "Home", link: "/" },
 ]
 
 export const ProjectRoutes = () => {
