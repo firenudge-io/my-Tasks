@@ -10,7 +10,7 @@ export const ProjectNavbar = () => {
                     className="text-gray-600 hover:text-blue-700 dark:text-gray-200 dark:hover:text-white"
                     to={"/"}>
                     <Navbar.Brand>
-                        <img src="https://raw.githubusercontent.com/dependabot-pr/Static-Files/main/Assets/my/Tasks.svg" className="mr-3 h-6 sm:h-9 rounded-lg" alt="Logo" />
+                        <img src="https://raw.githubusercontent.com/dependabot-pr/Static-Files/main/Assets/my/Tasks.png" className="mr-3 h-6 sm:h-9 rounded-lg" alt="Logo" />
                         <span className="self-center whitespace-nowrap text-xl font-semibold">
                             toDos
                         </span>

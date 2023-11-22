@@ -19,7 +19,8 @@
 
 .container input[type="checkbox"]:checked~div {
     text-decoration: line-through;
-    color: rgb(185 28 28 / var(--tw-text-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
 .container input[type="checkbox"] {

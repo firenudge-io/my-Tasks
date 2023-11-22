@@ -37,7 +37,7 @@ export const CheckBox = ({ id }: props) => {
                     className="my-1"
                 />
                 <div
-                    className="ml-3 cursor-pointer hover:text-red-900 dark:hover:text-red-300">
+                    className="ml-1 cursor-pointer hover:text-blue-900 hover:scale-105 dark:hover:text-blue-300">
                     {id}
                 </div>
             </label>

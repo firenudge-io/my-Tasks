@@ -92,7 +92,7 @@ export function TaskItems() {
                         item.name.split(' ')[0] === 'sep' ?
                             <>
                                 <div className="mb-20" id={item.name.split(' ')[1]}></div>
-                                <h1 className="text-3xl my-3">{item.name.split(' ')[1]}</h1>
+                                <h1 className="border-blue-300 dark:border-blue-700 w-fit rounded-xl m-2 p-2 px-6 border-2 text-3xl font-extrabold my-3">{item.name.split(' ')[1]}</h1>
                             </>
                             :
                             <div className="fade-in2">
@@ -100,6 +100,6 @@ export function TaskItems() {
                             </div>
                     ))
             }
-        </div>
+        </div >
     )
 }

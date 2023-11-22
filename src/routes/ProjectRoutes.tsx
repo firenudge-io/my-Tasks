@@ -14,7 +14,7 @@ export const Nav_Items = [
 
 export const ProjectRoutes = () => {
     return (
-        <div className="bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100">
+        <div className="bg-white text-slate-900 dark:bg-slate-700 dark:text-slate-100">
             <BrowserRouter>
                 <ProjectNavbar />
 
