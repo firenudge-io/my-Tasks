@@ -28,7 +28,7 @@ export const CheckBox = ({ id }: props) => {
 
             <label
                 htmlFor={id}
-                className="flex flex-row justify-start items-center">
+                className="flex flex-row justify-start">
                 <input
                     type='checkbox'
                     id={id}
@@ -37,7 +37,7 @@ export const CheckBox = ({ id }: props) => {
                     className="my-1"
                 />
                 <div
-                    className="ml-1 cursor-pointer hover:text-blue-900 hover:scale-105 dark:hover:text-blue-300">
+                    className="ml-1 cursor-pointer hover:text-blue-900 dark:hover:text-blue-300">
                     {id}
                 </div>
             </label>

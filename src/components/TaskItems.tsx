@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReadURL } from "../constants/URLS";
 import { CheckBox } from "../hooks/Checkbox";
 
@@ -37,12 +37,16 @@ export function TaskItems() {
 
         setLoading(false)
     }
-    fetchData();
+
 
     function toggle() {
         setShow(!show)
     }
 
+    // fix this Expected 0-1 arguments, but got 2.ts(2554) in useefecct
+    useEffect(() => {
+        fetchData()
+    })
 
     return (
         <div className="mb-10 mt-5">
@@ -66,6 +70,7 @@ export function TaskItems() {
                                     <a
                                         className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white m-3 uppercase"
                                         href={"#" + item.name.split(' ')[1]}
+                                        key={item.name}
                                     >
                                         <b>{item.name.split(' ')[1]}</b>
                                     </a>
@@ -88,18 +93,38 @@ export function TaskItems() {
 
                     </div>
                     :
-                    task.map((item) => (
-                        item.name.split(' ')[0] === 'sep' ?
-                            <>
-                                <div className="mb-20" id={item.name.split(' ')[1]}></div>
-                                <h1 className="border-blue-300 dark:border-blue-700 w-fit rounded-xl m-2 p-2 px-6 border-2 text-3xl font-extrabold my-3">{item.name.split(' ')[1]}</h1>
-                            </>
-                            :
-                            <div className="fade-in2">
-                                <CheckBox id={item.name} key={item.name} />
-                            </div>
-                    ))
+                    <div className="flex flex-row">
+                        <div id="accordian" className="accordian fade-in2">
+                            {task.map((item) => (
+                                item.name.split(' ')[0] === 'sep' ?
+                                    <a
+                                        className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white m-3 uppercase"
+                                        href={"#" + item.name.split(' ')[1]}
+                                        key={item.name}
+                                    >
+                                        <b>{item.name.split(' ')[1]}</b>
+                                    </a>
+                                    :
+                                    null
+                            ))}
+                        </div>
+                        <div className="flex flex-col">
+                            {task.map((item) => (
+                                item.name.split(' ')[0] === 'sep' ?
+                                    <>
+                                        <div className="mb-20" id={item.name.split(' ')[1]}></div>
+                                        <h1 className="border-blue-300 dark:border-blue-700 w-fit rounded-xl m-2 p-2 px-6 border-2 text-3xl font-extrabold my-3">{item.name.split(' ')[1]}</h1>
+                                    </>
+                                    :
+                                    <div className="fade-in2">
+                                        <CheckBox id={item.name} key={item.name} />
+                                    </div>
+                            ))}
+                        </div>
+                    </div>
+
             }
+
         </div >
     )
 }
